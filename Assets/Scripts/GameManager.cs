@@ -1,6 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -19,5 +18,10 @@ public class GameManager : MonoBehaviour
     {
         players[0].SetCar(carSprites[PlayerPrefs.GetInt("p1CarIndex")]);
         players[1].SetCar(carSprites[PlayerPrefs.GetInt("p2CarIndex")]);
+    }
+
+    private void Update()
+    {
+        Utility.QuitGame("escape");
     }
 }
