@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
 
     float verticalMovement;
     float horizontalMovement;
+    float scrollMovement;
 
     private void Awake()
     {
@@ -27,18 +28,23 @@ public class PlayerController : MonoBehaviour
         // store mouse movement
         verticalMovement = Input.GetAxis("Mouse Y") * speed; //forward
         horizontalMovement = Input.GetAxis("Mouse X") * turnSpeed; //turning
-
-        Debugger.Message("v: " + verticalMovement + ", h: " + horizontalMovement);
+        scrollMovement = Input.GetAxis("Mouse ScrollWheel") * turnSpeed;
     }
 
     private void FixedUpdate()
     {
         // flip axis to suit top down view, invert vertical to go from left to right
-        transform.position += new Vector3(-verticalMovement * Time.fixedDeltaTime, horizontalMovement * Time.fixedDeltaTime, 0);
+        transform.position += transform.right * verticalMovement * Time.fixedDeltaTime;
+
+        transform.Rotate(new Vector3(0, 0, -horizontalMovement * Time.fixedDeltaTime));
+        //transform.Rotate(new Vector3(0, 0, scrollMovement * Time.fixedDeltaTime));
 
         // TODO: 
         // - have rotation change depending on input from mouse to face the direction the cars is going
+
+
         // - when car roation is facing opposite direction, un invert verical movement
+
     }
 
     public void SetCar(Sprite newCar)
