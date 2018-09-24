@@ -563,7 +563,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.1
-  turnSpeed: 50
+  turnSpeed: 20
 --- !u!60 &1578629266
 PolygonCollider2D:
   m_ObjectHideFlags: 0
