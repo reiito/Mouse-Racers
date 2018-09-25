@@ -204,6 +204,7 @@ GameObject:
   m_Component:
   - component: {fileID: 558785942}
   - component: {fileID: 558785941}
+  - component: {fileID: 558785943}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -252,6 +253,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &558785943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 558785940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a778dae1086c63408dd749f56eb9574, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1119742023
 GameObject:
   m_ObjectHideFlags: 0
@@ -562,7 +574,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83bcfe2149389b54ba8a2d4122e75963, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.1
+  player: 0
+  speed: 1
   turnSpeed: 20
 --- !u!60 &1578629266
 PolygonCollider2D:
@@ -814,7 +827,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!50 &1637566487
 Rigidbody2D:
   serializedVersion: 4
@@ -1073,13 +1086,14 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1637566486}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 83bcfe2149389b54ba8a2d4122e75963, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
-  turnSpeed: 0
+  player: 1
+  speed: 1
+  turnSpeed: 20
 --- !u!212 &1637566490
 SpriteRenderer:
   m_ObjectHideFlags: 0

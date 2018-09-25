@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         gameManagerInstance = this;
+        Cursor.visible = false;
     }
 
     private void Start()
