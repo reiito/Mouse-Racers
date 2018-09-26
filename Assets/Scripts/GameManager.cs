@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         players[0].SetCar(carSprites[PlayerPrefs.GetInt("p1CarIndex")]);
-        players[1].SetCar(carSprites[PlayerPrefs.GetInt("p2CarIndex")]);
+        //players[1].SetCar(carSprites[PlayerPrefs.GetInt("p2CarIndex")]);
     }
 
     private void Update()
