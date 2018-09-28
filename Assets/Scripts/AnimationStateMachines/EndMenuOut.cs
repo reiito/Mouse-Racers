@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StartMenuOut : StateMachineBehaviour
+public class EndMenuOut : StateMachineBehaviour
 {
-    UIManager ui;
+    AnimationStateMachine asm;
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        ui = UIManager.uiManagerInstance;
+        asm = AnimationStateMachine.animationStateMachineInstance;
     }
 
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        ui.StartMenuAnimEnd();
+        asm.EndMenuEnd();
     }
 }

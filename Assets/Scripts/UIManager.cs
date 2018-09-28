@@ -84,40 +84,4 @@ public class UIManager : MonoBehaviour
     {
         endAnim.SetTrigger("Restart");
     }
-
-    public void StartMenuAnimHalf()
-    {
-        manager.SpawnLevel();
-    }
-
-    public void StartMenuAnimEnd()
-    {
-        menuObj.SetActive(false);
-        manager.gameState = GameState.PLAY;
-    }
-
-    bool restarted = false;
-    public void EndMenuRestartHalf()
-    {
-        restarted = true;
-        manager.SpawnLevel();
-    }
-
-    public void EndMenuBackHalf()
-    {
-        restarted = false;
-    }
-
-    public void EndMenuEnd()
-    {
-        endObj.SetActive(false);
-        if (restarted)
-        {
-            manager.gameState = GameState.PLAY;
-        }
-        else
-        {
-            manager.gameState = GameState.MENU;
-        }
-    }
 }
