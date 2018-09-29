@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class StartMenuOut : StateMachineBehaviour
 {
-    AnimationStateMachine asm;
+  AnimationManager animationManager;
 
-    override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-        asm = AnimationStateMachine.animationStateMachineInstance;
-    }
+  override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+  {
+    animationManager = AnimationManager.animationStateMachineInstance;
+  }
 
-    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-        asm.StartMenuAnimEnd();
-    }
+  override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+  {
+    animationManager.StartMenuAnimEnd();
+  }
 }

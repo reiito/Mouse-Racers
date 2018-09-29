@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AnimationStateMachine : MonoBehaviour
+public class AnimationManager : MonoBehaviour
 {
-    public static AnimationStateMachine animationStateMachineInstance;
+    public static AnimationManager animationStateMachineInstance;
 
     UIManager uiManager;
     Manager manager;

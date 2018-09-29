@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class MenuStateBehaviour : StateMachineBehaviour
 {
-    AnimationStateMachine asm;
+  AnimationManager animationManager;
 
-    override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-        asm = AnimationStateMachine.animationStateMachineInstance;
-    }
+  override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+  {
+    animationManager = AnimationManager.animationStateMachineInstance;
+  }
 
-    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-        asm.EndMenuBackHalf();
-    }
+  override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+  {
+    animationManager.EndMenuBackHalf();
+  }
 }
